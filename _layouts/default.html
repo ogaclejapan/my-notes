@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    {% include meta.html %}
+    <title>{% if page.title %} {{ page.title }} | {% endif %}{{ site.name }}</title>
+    {% include css.html %}
+    {% include old_ie.html %}
+  </head>
+  <body>
+    {% include navber.html %}
+    <div id="content">
+      <div class="container">
+        {{ content }} 
+      </div>
+    </div>
+    {% include footer.html %}
+    {% include back_to_top.html %}
+    {% include js.html %}
+  </body>
+</html>

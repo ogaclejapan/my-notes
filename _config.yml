@@ -1,0 +1,23 @@
+name: My Notes
+url: http://ogaclejapan.com
+baseurl: 
+timezone: Asia/Tokyo
+encoding: utf-8
+
+markdown: redcarpet
+pygments: true
+permalink: pretty
+paginate: 10
+
+owner : 
+  name : ogaclejapan
+  github : ogaclejapan
+  twitter : ogaclejapan
+
+google_analytics :
+  tracking_id : 'UA-37241684-1'
+
+addthis:
+  pub_id: 'ra-52b998c30d780542'
+
+exclude: ["README.md", "LICENSE", ".gitignore"]

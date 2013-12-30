@@ -1,0 +1,42 @@
+---
+layout: default
+title: Categories
+---
+
+<div class="row">
+	<div class="col-md-12 col-sm-12 col-xs-12">
+		<div class="page-header">
+		  <h1><i class="fa fa-folder-open fa-lg"></i> <em>{{ page.title }}</em></h1>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12 col-sm-12 col-xs-12">
+		<div class="list-group">
+			{% sorted_for category in site.categories sort_by:size %}
+			<a href="#{{ category[0] | handleize | downcase }}" class="list-group-item col-md-2 col-sm-3 col-xs-4">
+				<span class="badge">{{ category[1] | size }}</span>{{ category[0] | capitalize }}
+			</a>
+			{% endsorted_for %}
+		</div>
+	</div>
+</div>
+
+{% sorted_for category in site.categories sort_by:size %}
+<div class="row">
+	<div class="col-md-12 col-sm-12 col-xs-12">
+		<h2>
+			<span id="{{ category[0] | handleize | downcase }}" class="anchor-hack"></span>
+			<i class="fa fa-puzzle-piece"></i> <em>{{ category[0] | capitalize }}</em>
+		</h2>
+		<div class="list-group">
+			{% for post in category[1] %}
+			<a href="{{ site.baseurl }}{{ post.url }}" class="list-group-item col-md-6 col-sm-12 col-xs-12">
+				<p class="list-group-item-heading">{{ post.title }}</p>
+			</a>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+{% endsorted_for %}

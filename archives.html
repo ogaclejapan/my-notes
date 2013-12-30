@@ -1,0 +1,50 @@
+---
+layout: default
+title: Archives
+---
+
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="page-header">
+      <h1><i class="fa fa-archive fa-lg"></i> <em>{{ page.title }}</em></h1>
+    </div>
+  </div>
+</div>
+
+{% for post in site.posts %}
+
+  {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+  {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+
+  {% if forloop.first %}
+  <div class="row">
+  	<div class="col-md-12 col-sm-12 col-xs-12">
+      <h2>
+        <span id="y-{{ this_year }}" class="anchor-hack"></span>
+        <i class="fa fa-puzzle-piece"></i> <em>{{this_year}} ~</em>
+      </h2>
+      <div class="list-group">
+  {% endif %}
+
+  <a href="{{ site.baseurl }}{{ post.url }}" class="list-group-item col-md-6 col-sm-12 col-xs-12">
+  	<p class="list-group-item-heading">{{ post.title }}</p>
+  </a>
+
+  {% if forloop.last %}
+  	 </div>
+    </div>
+  </div>
+  {% elsif this_year != next_year %}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+  	<div class="col-md-12 col-sm-12 col-xs-12">
+  	  <h2>
+        <span id="y-{{ next_year }}" class="anchor-hack"></span>
+        <i class="fa fa-puzzle-piece"></i> <em>{{ next_year }} ~ {{ this_year }}</em>
+      </h2>
+      <div class="list-group">
+  {% endif %}
+
+{% endfor %}

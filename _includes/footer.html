@@ -1,0 +1,50 @@
+
+<div class="footer">
+  <div class="container">
+    <hr/>
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <ul class="nav nav-pills">
+          {% if site.owner.github %}
+          <li>
+            <a href="https://www.github.com/{{ site.owner.github }}">
+              <i class="fa fa-github-square fa-lg"></i> GitHub
+            </a>
+          </li>
+          {% endif %}
+          {% if site.owner.twitter %}
+          <li>
+            <a href="http://www.twitter.com/{{ site.owner.twitter }}">
+              <i class="fa fa-twitter-square fa-lg"></i> Twitter
+            </a>
+          </li>
+          {% endif %}
+          <li>
+            <a href="{{ site.baseurl }}/atom.xml">
+              <i class="fa fa-rss-square fa-lg"></i> Rss
+            </a>
+          </li>
+          <li class="pull-right">
+            <a href="#top">
+              <i class="fa fa-arrow-circle-up fa-lg"></i> Back to top
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">        
+        <p>
+          &copy; {{ site.owner.name }} {{ site.time | date: "%Y" }} 
+          with help from <a href="https://github.com/ogaclejapan/jekyllstrap" target="_blank" title="jekyllstrap is Jekyll template based on Bootstrap.">Jekyllstrap</a>.
+        </p>
+        <p>
+          Based on <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>. 
+          Themes from <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> and <a href="http://bootswatch.com/" target="_blank">Bootswatch</a>. 
+          Icons from <a href="http://fontawesome.io/" target="_blank">Font Awesome</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+

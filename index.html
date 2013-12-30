@@ -1,0 +1,69 @@
+---
+layout: default
+---
+
+{% for post in paginator.posts %}
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <section class="post">
+      <div class="page-header">
+        <h2><a href="{{ site.baseurl }}{{ post.url }}"><i class="fa fa-puzzle-piece"></i> {{ post.title }}</a></h2>
+      </div>
+      <p class="lead">{{ post.content | strip_html | truncate: 150 }}</p>
+    </section>
+  </div>
+</div>
+{% endfor %}
+
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+
+    {% assign pagination_column_nums = 3 %}
+    {% assign pagination_start_page = 1 %}
+    {% assign pagination_end_page = pagination_column_nums %}
+    {% if paginator.page > pagination_column_nums %}
+      {% capture pagination_start_page %}{{ paginator.page | minus: pagination_column_nums | plus:1 }}{% endcapture %}
+      {% assign pagination_end_page = paginator.page %}
+    {% elsif pagination_column_nums > paginator.total_pages %}
+      {% assign pagination_end_page = paginator.total_pages %}
+    {% endif %}
+
+    <div class="text-center">
+      <ul class="pagination">
+        {% if pagination_start_page == 1 %}
+          <li class="disabled"><span>&laquo;</span></li> 
+        {% else %}
+          {% capture pagination_previous_page %}{{ pagination_start_page | minus:1 }}{% endcapture %}
+          <li>
+            {% if pagination_previous_page == 1 %}
+            <a href="{{ site.baseurl }}/">
+            {% else %}
+            <a href="{{ site.baseurl }}/page{{ pagination_previous_page }}">
+            {% endif %}
+            &laquo;</a>
+          </li> 
+        {% endif %}
+
+        {% for i in (pagination_start_page..pagination_end_page) %}
+          <li{% if i == paginator.page %} class="active"{% endif %}>
+            {% if i == 1 %}
+            <a href="{{ site.baseurl }}/">
+            {% else %}
+            <a href="{{ site.baseurl }}/page{{ i }}">
+            {% endif %}
+            {{ i }}</a>
+          </li>
+        {% endfor %}
+
+        {% if pagination_end_page == paginator.total_pages %}
+          <li class="disabled"><span>&raquo;</span></li> 
+        {% else %}
+          {% capture pagination_next_page %}{{ pagination_end_page | plus:1 }}{% endcapture %}
+          <li>
+            <a href="{{ site.baseurl }}/page{{ pagination_next_page }}">&raquo;</a>
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</div>

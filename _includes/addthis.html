@@ -1,0 +1,15 @@
+
+{% if site.addthis.pub_id %}
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ site.addthis.pub_id }}"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'left',
+      'services' : "tumblr,facebook,twitter,hatena,evernote,google_plusone_share,more",
+      'numPreferredServices' : 7
+    },
+    'whatsnext' : {}  
+  });
+</script>
+{% endif %}

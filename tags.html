@@ -1,0 +1,42 @@
+---
+layout: default
+title: Tags
+---
+
+<div class="row">
+	<div class="col-md-12 col-sm-12 col-xs-12">
+		<div class="page-header">
+		  <h1><i class="fa fa-tags fa-lg"></i> <em>{{ page.title }}</em></h1>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12 col-sm-12 col-xs-12">
+		<div class="list-group">
+		{% sorted_for tag in site.tags sort_by:size %}
+		  <a href="#{{ tag[0] | handleize | downcase }}" class="list-group-item col-md-2 col-sm-3 col-xs-4">
+		  	<span class="badge">{{ tag[1] | size }}</span>{{ tag[0] }}
+		  </a>
+		{% endsorted_for %}
+		</div>
+	</div>
+</div>
+
+{% sorted_for tag in site.tags sort_by:size %}
+<div class="row">
+	<div class="col-md-12 col-sm-12 col-xs-12">
+		<h2>
+			<span id="{{ tag[0] | handleize | downcase }}" class="anchor-hack"></span>
+			<i class="fa fa-puzzle-piece"></i> <em>{{ tag[0] }}</em>
+		</h2>
+		<div class="list-group">
+			{% for post in tag[1] %}
+			<a href="{{ site.baseurl }}{{ post.url }}" class="list-group-item col-md-6 col-sm-12 col-xs-12">
+				<p class="list-group-item-heading">{{ post.title }}</p>
+			</a>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+{% endsorted_for %}
