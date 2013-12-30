@@ -16,7 +16,7 @@ title: Categories
 		<div class="list-group">
 			{% sorted_for category in site.categories sort_by:size %}
 			<a href="#{{ category[0] | handleize | downcase }}" class="list-group-item col-md-2 col-sm-4 col-xs-6">
-				<span class="badge">{{ category[1] | size }}</span>{{ category[0] | capitalize }}
+				<em>{{ category[0] | capitalize }}</em><span class="badge">{{ category[1] | size }}</span>
 			</a>
 			{% endsorted_for %}
 		</div>

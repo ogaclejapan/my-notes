@@ -16,7 +16,7 @@ title: Tags
 		<div class="list-group">
 		{% sorted_for tag in site.tags sort_by:size %}
 		  <a href="#{{ tag[0] | handleize | downcase }}" class="list-group-item col-md-2 col-sm-4 col-xs-6">
-		  	<span class="badge">{{ tag[1] | size }}</span>{{ tag[0] }}
+		  	<em>{{ tag[0] }}</em><span class="badge">{{ tag[1] | size }}</span>
 		  </a>
 		{% endsorted_for %}
 		</div>
