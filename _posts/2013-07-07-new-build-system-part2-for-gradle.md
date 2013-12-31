@@ -45,7 +45,8 @@ android {
 
 プロパティを定義してないときのDSL上の値とデフォルト値は次のとおり。
 
-<table border="1" cellpadding="10">
+<div class="table-responsive">
+<table class="table">
     <tr>
         <th>Property Name</th>
         <th>Default value in DSL object</th>
@@ -102,6 +103,7 @@ android {
         <td>N/A</td>
     </tr>
 </table>
+</div>
 
 -----------------------
 ## ビルド環境のカスタマイズ
@@ -139,7 +141,8 @@ android {
 ビルド環境に関するデフォルト設定値は次のとおり。  
 debugとreleaseのデフォルト値が異なるようので要注意。
 
-<table border="1" cellpadding="10">
+<div class="table-responsive">
+<table class="table">    
     <tr>
         <th>Property Name</th>
         <th>Default value for debug</th>
@@ -201,7 +204,7 @@ debugとreleaseのデフォルト値が異なるようので要注意。
         <td>N/A</td>
     </tr>
 </table>
-
+</div>
 
 独自のビルド環境を定義することで環境に依存したコードやリソースをビルドに含めることができる。
 デフォルトではsourceSetに`src/<buildtypename>/`として自動で設定される。

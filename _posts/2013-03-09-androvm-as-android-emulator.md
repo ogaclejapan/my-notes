@@ -48,8 +48,8 @@ VirtualBoxを既に使っている人なら瞬殺レベル。
 
 2. VirtualBoxを起動し、`[ファイル]→[仮想アプライアンスのインポート]`からダウンロードしたAndroVM(ova)ファイルをインポート。
 
-	![image](https://www.googledrive.com/host/0B30bERhjS_icZGxLRlRoRUlmM1k)  
-	→アプライアンスの設定はデフォルトで問題なし  
+{% image https://www.googledrive.com/host/0B30bERhjS_icZGxLRlRoRUlmM1k %}
+→アプライアンスの設定はデフォルトで問題なし  
 
 これで起動準備おk。
 
@@ -60,10 +60,10 @@ VirtualBoxを既に使っている人なら瞬殺レベル。
 ネットワーク設定のポートフォワーディングに`localhost:5555→10.0.3.15:5555`を追加することで実現できる。
 
 インポートしたAndroVMのネットワーク設定を選択し、ポートフォワーディングボタンを押下。
-![image](https://www.googledrive.com/host/0B30bERhjS_icTDVMU004bE9zMXM)
+{% image https://www.googledrive.com/host/0B30bERhjS_icTDVMU004bE9zMXM %}
 
 TCPの5555番ポートをAndroVMの仮想IP:5555番ポートに流すようにする。
-![image](https://www.googledrive.com/host/0B30bERhjS_icazFIOU9WMk45WjQ)
+{% image https://www.googledrive.com/host/0B30bERhjS_icazFIOU9WMk45WjQ %}
 
 これでvm起動後、adbのconnectコマンドで接続できるはず。
 {% highlight bash %}
@@ -89,7 +89,8 @@ adb devices
 
 （複数認識するキーがある場合はorで記載）
 
-<table border="1" cellpadding="10">
+<div class="table-responsive">
+<table>
 	<tr>
 		<th>AndroVM Device Key</th>
 		<th>PC Keyboard Key</th>
@@ -132,6 +133,7 @@ adb devices
 	</tr>
 
 </table>
+</div>
 
 -----------------------
 ## AndroVMおすすめアプリ

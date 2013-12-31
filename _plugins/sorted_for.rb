@@ -1,4 +1,16 @@
 module Jekyll
+
+  # Sorted for 
+  #
+  # Usage:
+  #
+  #   e.g. Tag size sorted for
+  #   {% sorted_for tag in site.tags sort_by:size %}
+  #
+  #   e.g. Tag name sorted for
+  #   {% sorted_for tag in site.tags sort_by:name %}
+  #
+
   class SortedFor < Liquid::For
     def render(context)
 
