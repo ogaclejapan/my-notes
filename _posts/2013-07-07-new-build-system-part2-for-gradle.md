@@ -140,70 +140,70 @@ android {
 ビルド環境に関するデフォルト設定値は次のとおり。  
 debugとreleaseのデフォルト値が異なるようので要注意。
 
-<section class="table-responsive">
-    <table class="table">    
-        <tr>
-            <th>Property Name</th>
-            <th>Default value for debug</th>
-            <th>Default value for release / other</th>
-        </tr>
-        <tr>
-            <td>debuggable</td>
-            <td>-true</td>
-            <td>false</td>
-        </tr>
-        <tr>
-            <td>jniDebugBuild</td>
-            <td>-false</td>
-            <td>false</td>
-        </tr>
-        <tr>
-            <td>renderscriptDebugBuild</td>
-            <td>-false</td>
-            <td>false</td>
-        </tr>
-        <tr>
-            <td>renderscriptOptimLevel</td>
-            <td>-3</td>
-            <td>3</td>
-        </tr>
-        <tr>
-            <td>packageNameSuffix</td>
-            <td>-null</td>
-            <td>null</td>
-        </tr>
-        <tr>
-            <td>versionNameSuffix</td>
-            <td>-null</td>
-            <td>null</td>
-        </tr>
-        <tr>
-            <td>signingConfig</td>
-            <td>android.signingConfigs.debug</td>
-            <td>null</td>
-        </tr>
-        <tr>
-            <td>zipAlign</td>
-            <td>false</td>
-            <td>true</td>
-        </tr>
-        <tr>
-            <td>runProguard</td>
-            <td>false</td>
-            <td>true</td>
-        </tr>
-        <tr>
-            <td>proguardFile</td>
-            <td>N/A</td>
-            <td>N/A</td>
-        </tr>
-        <tr>
-            <td>proguardFiles</td>
-            <td>N/A</td>
-            <td>N/A</td>
-        </tr>ope
-    </table>
-</section>
+
+<table class="table">    
+    <tr>
+        <th>Property Name</th>
+        <th>Default value for debug</th>
+        <th>Default value for release / other</th>
+    </tr>
+    <tr>
+        <td>debuggable</td>
+        <td>-true</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td>jniDebugBuild</td>
+        <td>-false</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td>renderscriptDebugBuild</td>
+        <td>-false</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td>renderscriptOptimLevel</td>
+        <td>-3</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>packageNameSuffix</td>
+        <td>-null</td>
+        <td>null</td>
+    </tr>
+    <tr>
+        <td>versionNameSuffix</td>
+        <td>-null</td>
+        <td>null</td>
+    </tr>
+    <tr>
+        <td>signingConfig</td>
+        <td>android.signingConfigs.debug</td>
+        <td>null</td>
+    </tr>
+    <tr>
+        <td>zipAlign</td>
+        <td>false</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td>runProguard</td>
+        <td>false</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td>proguardFile</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td>proguardFiles</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>ope
+</table>
+
 
 独自のビルド環境を定義することで環境に依存したコードやリソースをビルドに含めることができる。
 デフォルトではsourceSetに`src/<buildtypename>/`として自動で設定される。
