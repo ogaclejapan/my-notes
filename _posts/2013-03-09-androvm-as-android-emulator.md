@@ -90,7 +90,7 @@ adb devices
 （複数認識するキーがある場合はorで記載）
 
 <div class="table-responsive">
-<table>
+<table class="table">
 	<tr>
 		<th>AndroVM Device Key</th>
 		<th>PC Keyboard Key</th>
