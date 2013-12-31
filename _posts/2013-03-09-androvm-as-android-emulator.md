@@ -91,7 +91,6 @@ adb devices
 
 （複数認識するキーがある場合はorで記載）
 
-<section class="table-responsive">
 <table class="table">
 	<tr>
 		<th>AndroVM Device Key</th>
@@ -135,7 +134,6 @@ adb devices
 	</tr>
 
 </table>
-</section>
 
 -----------------------
 ## AndroVMおすすめアプリ

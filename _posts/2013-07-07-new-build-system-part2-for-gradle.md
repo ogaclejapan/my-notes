@@ -45,7 +45,6 @@ android {
 
 プロパティを定義してないときのDSL上の値とデフォルト値は次のとおり。
 
-<section class="table-responsive">
 <table class="table">
     <tr>
         <th>Property Name</th>
@@ -103,7 +102,7 @@ android {
         <td>N/A</td>
     </tr>
 </table>
-</section>
+
 
 -----------------------
 ## ビルド環境のカスタマイズ
