@@ -66,6 +66,7 @@ TCPの5555番ポートをAndroVMの仮想IP:5555番ポートに流すように�
 {% image https://www.googledrive.com/host/0B30bERhjS_icazFIOU9WMk45WjQ %}
 
 これでvm起動後、adbのconnectコマンドで接続できるはず。
+
 {% highlight bash %}
 adb connect localhost
 #* daemon not running. starting it now on port 5037 *
@@ -82,6 +83,7 @@ adb devices
 * [android 開発でエミュレーターの代わりに x86版 + Virtualbox を使ってみる](http://poozxxx.hatenablog.com/entry/2012/07/25/013740)
 
 -----------------------
+
 ## AndroVMのキーボード操作表
 
 一部のキーはAndroVMplayerというフロントエンドアプリ経由で起動することで使用可能になる。  
@@ -89,7 +91,7 @@ adb devices
 
 （複数認識するキーがある場合はorで記載）
 
-<div class="table-responsive">
+<section class="table-responsive">
 <table class="table">
 	<tr>
 		<th>AndroVM Device Key</th>
@@ -133,7 +135,7 @@ adb devices
 	</tr>
 
 </table>
-</div>
+</section>
 
 -----------------------
 ## AndroVMおすすめアプリ
