@@ -12,7 +12,7 @@ title : Sitemaps
 	</url>
 
 	<url>
-	 	<loc>{{ site.url }}{{ site.baseurl }}/archvies</loc>
+	 	<loc>{{ site.url }}{{ site.baseurl }}/archives</loc>
 	 	<lastmod>{{ site.time | date:'%Y-%m-%d' }}</lastmod>
 	 	<changefreq>weekly</changefreq>
 	</url>
