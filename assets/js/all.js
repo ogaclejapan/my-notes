@@ -1,3 +1,4 @@
+/*! all.js v1.0 */
 ;(function($, window) {
 
   $(window.document).ready(function() { 
