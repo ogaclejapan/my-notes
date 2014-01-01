@@ -12,19 +12,19 @@ title : Sitemaps
 	</url>
 
 	<url>
-	 	<loc>{{ site.url }}{{ site.baseurl }}/archives</loc>
+	 	<loc>{{ site.url }}{{ site.baseurl }}/archives/</loc>
 	 	<lastmod>{{ site.time | date:'%Y-%m-%d' }}</lastmod>
 	 	<changefreq>weekly</changefreq>
 	</url>
 
 	<url>
-	 	<loc>{{ site.url }}{{ site.baseurl }}/categories</loc>
+	 	<loc>{{ site.url }}{{ site.baseurl }}/categories/</loc>
 	 	<lastmod>{{ site.time | date:'%Y-%m-%d' }}</lastmod>
 	 	<changefreq>weekly</changefreq>
 	</url>
 
 	<url>
-	 	<loc>{{ site.url }}{{ site.baseurl }}/tags</loc>
+	 	<loc>{{ site.url }}{{ site.baseurl }}/tags/</loc>
 	 	<lastmod>{{ site.time | date:'%Y-%m-%d' }}</lastmod>
 	 	<changefreq>weekly</changefreq>
 	</url>
