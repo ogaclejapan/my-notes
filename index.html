@@ -22,7 +22,7 @@ layout: default
     {% assign pagination_start_page = 1 %}
     {% assign pagination_end_page = pagination_column_nums %}
     {% if paginator.page > pagination_column_nums %}
-      {% capture pagination_start_page %}{{ paginator.page | minus: pagination_column_nums | plus:1 }}{% endcapture %}
+      {% assign pagination_start_page = paginator.page | minus: pagination_column_nums | plus:1 %}
       {% assign pagination_end_page = paginator.page %}
     {% elsif pagination_column_nums > paginator.total_pages %}
       {% assign pagination_end_page = paginator.total_pages %}
@@ -33,12 +33,12 @@ layout: default
         {% if pagination_start_page == 1 %}
           <li class="disabled"><span>&laquo;</span></li> 
         {% else %}
-          {% capture pagination_previous_page %}{{ pagination_start_page | minus:1 }}{% endcapture %}
+          {% assign pagination_previous_page = pagination_start_page | minus:1 %}
           <li>
             {% if pagination_previous_page == 1 %}
             <a href="{{ site.baseurl }}/">
             {% else %}
-            <a href="{{ site.baseurl }}/page{{ pagination_previous_page }}">
+            <a href="{{ site.baseurl }}/page{{ pagination_previous_page }}/">
             {% endif %}
             &laquo;</a>
           </li> 
@@ -49,7 +49,7 @@ layout: default
             {% if i == 1 %}
             <a href="{{ site.baseurl }}/">
             {% else %}
-            <a href="{{ site.baseurl }}/page{{ i }}">
+            <a href="{{ site.baseurl }}/page{{ i }}/">
             {% endif %}
             {{ i }}</a>
           </li>
@@ -58,9 +58,9 @@ layout: default
         {% if pagination_end_page == paginator.total_pages %}
           <li class="disabled"><span>&raquo;</span></li> 
         {% else %}
-          {% capture pagination_next_page %}{{ pagination_end_page | plus:1 }}{% endcapture %}
+          {% assign pagination_next_page = pagination_end_page | plus:1 %}
           <li>
-            <a href="{{ site.baseurl }}/page{{ pagination_next_page }}">&raquo;</a>
+            <a href="{{ site.baseurl }}/page{{ pagination_next_page }}/">&raquo;</a>
           </li>
         {% endif %}
       </ul>

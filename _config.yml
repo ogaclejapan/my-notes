@@ -7,7 +7,7 @@ encoding: utf-8
 markdown: redcarpet
 pygments: true
 permalink: pretty
-paginate: 10
+paginate: 5
 
 owner : 
   name : ogaclejapan
