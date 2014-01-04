@@ -20,4 +20,4 @@ google_analytics :
 addthis:
   pub_id: 'ra-52b998c30d780542'
 
-exclude: ["README.md", "LICENSE", ".gitignore", "s3_website.yml"]
+exclude: ["README.md", "LICENSE", ".gitignore", "s3_website.yml", "images"]
