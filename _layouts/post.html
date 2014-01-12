@@ -11,11 +11,11 @@
     {% include navber.html %}
     <div id="content">
       <div class="container">
-        <article class="page-content">
+        <article itemscope itemtype="http://schema.org/{{ site.schema_article_type }}" itemref="owner">
           {% include post_header.html %}
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-              <div class="page-body">
+              <div itmprop="articleBody">
                 {{ content }}
               </div>
             </div>

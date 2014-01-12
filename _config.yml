@@ -5,6 +5,9 @@ timezone: Asia/Tokyo
 encoding: utf-8
 
 markdown: redcarpet
+redcarpet:
+  extensions: ["strikethrough", "tables", "fenced_code_blocks"]
+
 pygments: true
 permalink: pretty
 paginate: 5
@@ -13,6 +16,11 @@ owner :
   name : ogaclejapan
   github : ogaclejapan
   twitter : ogaclejapan
+#  googleplus : 
+#  facebook : 
+
+# See http://schema.org/Article
+schema_article_type : Article
 
 google_analytics :
   tracking_id : 'UA-37241684-1'

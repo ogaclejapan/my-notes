@@ -5,11 +5,11 @@ layout: default
 {% for post in paginator.posts %}
 <div class="row">
   <div class="col-md-12 col-sm-12 col-xs-12">
-    <section class="post">
+    <section class="post" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting" itemref="owner">
       <div class="page-header">
-        <h2><a href="{{ site.baseurl }}{{ post.url }}"><i class="fa fa-puzzle-piece"></i> {{ post.title }}</a></h2>
+        <h2><a href="{{ site.baseurl }}{{ post.url }}" itemprop="url" content="{{ site.url }}{{ site.baseurl }}{{ post.url }}"><i class="fa fa-puzzle-piece"></i> <span itemprop="name">{{ post.title }}</span></a></h2>
       </div>
-      <p class="lead">{{ post.content | strip_html | truncate: 150 }}</p>
+      <p class="lead" itemprop="description">{{ post.content | strip_html | truncate: 150 }}</p>
     </section>
   </div>
 </div>

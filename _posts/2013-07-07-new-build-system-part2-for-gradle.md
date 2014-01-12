@@ -201,7 +201,7 @@ debugとreleaseのデフォルト値が異なるようので要注意。
         <td>proguardFiles</td>
         <td>N/A</td>
         <td>N/A</td>
-    </tr>ope
+    </tr>
 </table>
 
 

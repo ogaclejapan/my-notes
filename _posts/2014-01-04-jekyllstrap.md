@@ -3,6 +3,7 @@ layout: post
 title: Bootstrap臭のする静的サイトが作れるJekyllテンプレ
 category: Tools
 tags: [Jekyll, Bootstrap]
+modified: 2014-01-12
 ---
 
 新年あけましておめでとうございます。 彡^･∋★A Happy New Year★∈･^ミ
@@ -74,9 +75,10 @@ tags: [Jekyll, Bootstrap]
 
 ### （今後実装したいもの）
 
-* **SEO強化（[schema.org][schema-org]の構造化データ対応）**
+* ~~**SEO強化（[schema.org][schema-org]の構造化データ対応）**~~
 
-    最近記事でちょいちょい見かけるやつ。全然理解してないのでSEO勉強がてら実装してみたい。
+    ~~最近記事でちょいちょい見かけるやつ。全然理解してないのでSEO勉強がてら実装してみたい。~~  
+    (1/14追記) [スキーマ(Schema.org) 入門編][ref-schema]を参考に実装してみました。
 
 * **テーブル構造のレスポンシブ対応**
 
@@ -93,12 +95,12 @@ Bootstrap臭でよかったら使ってやってください。
 
 もっとJekyllについて詳しく知りたい方はこの辺のサイトを参考にすると分かりやすいでしょう。
 
-* [Jekyllいつやるの？ジキやルの？今でしょ！][jekyll-about-ref1]
-* [静的HTMLジェネレータ jekyllを考えるの巻][jekyll-about-ref2]
+* [Jekyllいつやるの？ジキやルの？今でしょ！][ref-jekyll-about1]
+* [静的HTMLジェネレータ jekyllを考えるの巻][ref-jekyll-about2]
 
 Gruntを組み込んで使ってる方もいるようです。
 
-* [静的ページをJekyllとGrunt/Yeomanで作る][jekyll-about-ref3]
+* [静的ページをJekyllとGrunt/Yeomanで作る][ref-jekyll-about3]
 
 
 会社でもGHEが導入されたのでプライベートリポジトリで社内用メモ帳として使ってみるかな〜
@@ -107,9 +109,6 @@ Gruntを組み込んで使ってる方もいるようです。
 [jekyllstrap]: http://ogaclejapan.github.io/jekyllstrap/
 [jekyllstrap-github]: https://github.com/ogaclejapan/jekyllstrap
 [jekyll]: http://jekyllrb.com/
-[jekyll-about-ref1]: http://melborne.github.io/2013/05/20/now-the-time-to-start-jekyll/
-[jekyll-about-ref2]: http://meusonho41.com/blog/?p=474
-[jekyll-about-ref3]: http://qiita.com/shoito/items/5dad6e715d4e4d49e752
 [atom-feed]: http://ja.wikipedia.org/wiki/Atom
 [seo-sitemap]: http://holy-seo.net/blog/seo/sitemap-sml-method-described-merit/
 [seo-robots]: http://bazubu.com/robots-txt-16678.html
@@ -117,5 +116,8 @@ Gruntを組み込んで使ってる方もいるようです。
 [addthis]: https://www.addthis.com/get/smart-layers
 [schema-org]: http://tech.naver.jp/blog/?p=1038
 [redcarpet]: https://github.com/vmg/redcarpet
-
+[ref-jekyll-about1]: http://melborne.github.io/2013/05/20/now-the-time-to-start-jekyll/
+[ref-jekyll-about2]: http://meusonho41.com/blog/?p=474
+[ref-jekyll-about3]: http://qiita.com/shoito/items/5dad6e715d4e4d49e752
+[ref-schema]: http://omotan.com/web/seo/schema-entering.html
 

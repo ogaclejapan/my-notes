@@ -2,7 +2,9 @@
 <div class="row">
   <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="page-header">
-      <h1><i class="fa fa-puzzle-piece fa-lg"></i> {{ page.title }}</h1>
+      <h1 itemprop="url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+        <i class="fa fa-puzzle-piece fa-lg"></i> <span itemprop="name">{{ page.title }}</span>
+      </h1>
     </div>
   </div>
 </div>

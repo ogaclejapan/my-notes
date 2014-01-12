@@ -15,32 +15,54 @@
         <li><a href="{{ site.baseurl }}/categories/">Categories</a></li>
         <li><a href="{{ site.baseurl }}/tags/">Tags</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ site.owner.name }} <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            {% if site.owner.github %}
-            <li>
-              <a href="https://www.github.com/{{ site.owner.github }}">
-                <i class="fa fa-github-square fa-lg"></i> GitHub
-              </a>
-            </li>
-            {% endif %}
-            {% if site.owner.twitter %}
-            <li>
-              <a href="http://www.twitter.com/{{ site.owner.twitter }}">
-                <i class="fa fa-twitter-square fa-lg"></i> Twitter
-              </a>
-            </li>
-            {% endif %}
-            <li>
-              <a href="{{ site.baseurl }}/atom.xml">
-                <i class="fa fa-rss-square fa-lg fa-lg"></i> Rss
-              </a>
-            </li>
-          </ul>
-        </li>      
-      </ul>          
+      <div id="owner" itemprop="author copyrightHolder editor" itemscope itemtype="http://schema.org/Person">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span itemprop="alternateName">{{ site.owner.name }}</span> <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              {% if site.owner.github %}
+              <li>
+                {% capture owner_github_url %}https://www.github.com/{{ site.owner.github }}{% endcapture %}
+                <a href="{{ owner_github_url }}" itemprop="sameAs" content="{{ owner_github_url }}">
+                  <i class="fa fa-github-square fa-lg"></i> GitHub
+                </a>
+              </li>
+              {% endif %}
+              {% if site.owner.twitter %}
+              <li>
+                {% capture owner_twitter_url %}http://www.twitter.com/{{ site.owner.twitter }}{% endcapture %}
+                <a href="{{ owner_twitter_url }}" itemprop="sameAs" content="{{ owner_twitter_url }}">
+                  <i class="fa fa-twitter-square fa-lg"></i> Twitter
+                </a>
+              </li>
+              {% endif %}
+              {% if site.owner.googleplus %}
+              <li>
+                {% capture owner_googleplus_url %}https://plus.google.com/{{ site.owner.googleplus }}{% endcapture %}
+                <a href="{{ owner_googleplus_url }}" itemprop="sameAs" content="{{ owner_googleplus_url }}">
+                  <i class="fa fa-google-plus-square fa-lg"></i> Google+
+                </a>
+              </li>              
+              {% endif %}
+              {% if site.owner.facebook %}
+              <li>
+                {% capture owner_facebook_url %}http://www.facebook.com/{{ site.owner.facebook }}{% endcapture %}
+                <a href="{{ site.owner.facebook }}" itemprop="sameAs" content="{{ site.owner.facebook }}">
+                  <i class="fa fa-facebook-square fa-lg"></i> Facebook
+                </a>
+              </li>              
+              {% endif %}
+              <li>
+                <a href="{{ site.baseurl }}/atom.xml">
+                  <i class="fa fa-rss-square fa-lg fa-lg"></i> Rss
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
