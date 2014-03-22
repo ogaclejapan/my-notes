@@ -44,15 +44,15 @@
                 <a href="{{ owner_googleplus_url }}" itemprop="sameAs" content="{{ owner_googleplus_url }}">
                   <i class="fa fa-google-plus-square fa-lg"></i> Google+
                 </a>
-              </li>              
+              </li>
               {% endif %}
               {% if site.owner.facebook %}
               <li>
                 {% capture owner_facebook_url %}http://www.facebook.com/{{ site.owner.facebook }}{% endcapture %}
-                <a href="{{ site.owner.facebook }}" itemprop="sameAs" content="{{ site.owner.facebook }}">
+                <a href="{{ owner_facebook_url }}" itemprop="sameAs" content="{{ owner_facebook_url }}">
                   <i class="fa fa-facebook-square fa-lg"></i> Facebook
                 </a>
-              </li>              
+              </li>
               {% endif %}
               <li>
                 <a href="{{ site.baseurl }}/atom.xml">
