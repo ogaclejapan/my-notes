@@ -6,7 +6,7 @@ encoding: utf-8
 
 markdown: redcarpet
 redcarpet:
-  extensions: ["strikethrough", "tables", "fenced_code_blocks"]
+  extensions: ["strikethrough", "tables", "fenced_code_blocks", "autolink"]
 
 pygments: true
 permalink: pretty
