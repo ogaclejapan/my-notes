@@ -2,7 +2,11 @@
 <html lang="ja">
   <head>
     {% include meta.html %}
-    <title>{% if page.title %} {{ page.title }} | {% endif %}{{ site.name }}</title>
+    <title>
+      {% if page.title %}{{ page.title }} | {% endif %}
+      {% if paginator.page > 1 %}Page{{ paginator.page }} | {% endif %}
+      {{ site.name }}
+    </title>
     {% include css.html %}
     {% include old_ie.html %}
   </head>
