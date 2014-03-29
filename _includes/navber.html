@@ -19,7 +19,8 @@
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <span itemprop="alternateName">{{ site.owner.name }}</span> <b class="caret"></b>
+              <meta itemprop="name" content="{{ site.owner.name }}" />
+              <span itemprop="alternateName">{{ site.owner.nickname }}</span> <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
               {% if site.owner.github %}
@@ -41,7 +42,7 @@
               {% if site.owner.googleplus %}
               <li>
                 {% capture owner_googleplus_url %}https://plus.google.com/{{ site.owner.googleplus }}{% endcapture %}
-                <a href="{{ owner_googleplus_url }}" itemprop="sameAs" content="{{ owner_googleplus_url }}">
+                <a href="{{ owner_googleplus_url }}" rel="author" itemprop="sameAs" content="{{ owner_googleplus_url }}?rel=author">
                   <i class="fa fa-google-plus-square fa-lg"></i> Google+
                 </a>
               </li>
