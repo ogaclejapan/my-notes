@@ -8,7 +8,7 @@ markdown: redcarpet
 redcarpet:
   extensions: ["strikethrough", "tables", "fenced_code_blocks", "autolink"]
 
-pygments: true
+highlighter: pygments
 permalink: pretty
 paginate: 5
 
